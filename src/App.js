@@ -11,7 +11,15 @@ function App() {
 		  <ul>
 			  {customers.map(customer => {
 				  return (
-					  <li key={customer.customerID}>{customer.companyName}</li>
+					  <li key={customer.customerID}>{customer.companyName}
+						  <ul>
+							  {orders.filter(m => m.customerID === customer.customerID).map(order => {
+								  return (
+									  <li>{order.orderID}</li>
+								  )
+							  })}
+						  </ul> 
+					  </li>
 				 )
 			 })}
 		  </ul>
