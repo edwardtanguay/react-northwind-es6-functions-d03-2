@@ -3,6 +3,7 @@ import './App.css';
 import customers from './data/customers.json';
 import orders from './data/orders.json';
 import { FaSpinner } from 'react-icons/fa';
+import { Products } from './components/Products';
 
 // const colors = ['yellow', 'orange', 'purple', 'blue', 'green'];
 // colors.sort();
@@ -52,13 +53,7 @@ function App() {
 												</ul>
 											)}
 											{products.length > 0 && (
-												<ul>
-													{order.details.map(product => {
-														return (
-															<li>{products.find(m => m.productID === product.productID).name}</li>
-														)
-													})}
-												</ul>
+												<Products order={order} products={products} />
 											)}
 
 										</li>
