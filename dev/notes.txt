@@ -9,3 +9,4 @@
 - .. fetch product data via API (mit fetch) and show "There are nnn products."
 
 - show waiting symbol while products loads
+- break code into components

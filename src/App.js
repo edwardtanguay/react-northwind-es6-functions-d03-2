@@ -35,7 +35,16 @@ function App() {
 							<ul>
 								{orders.filter(m => m.customerID === customer.customerID).sort((a, b) => a.orderID - b.orderID).map((order, index, arr) => {
 									return (
-										<li key={index}>{order.orderID} - {order.orderDate.substring(0, 10)} ({index + 1} of {arr.length})</li>
+										<li key={index}>{order.orderID} - {order.orderDate.substring(0, 10)} ({index + 1} of {arr.length})
+											<ul>
+												{order.details.map(product => {
+													return (
+														<li>{products.find(m=> m.productID === product.productID).name}</li>
+													)
+												})}	
+											</ul>
+
+										</li>
 									)
 								})}
 							</ul>
