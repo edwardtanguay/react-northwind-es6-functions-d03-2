@@ -13,9 +13,9 @@ function App() {
 				  return (
 					  <li key={customer.customerID}>{customer.companyName}
 						  <ul>
-							  {orders.filter(m => m.customerID === customer.customerID).map(order => {
+							  {orders.filter(m => m.customerID === customer.customerID).map((order, index) => {
 								  return (
-									  <li>{order.orderID}</li>
+									  <li>{index + 1}. {order.orderID} - {order.orderDate.substring(0,10)}</li>
 								  )
 							  })}
 						  </ul> 

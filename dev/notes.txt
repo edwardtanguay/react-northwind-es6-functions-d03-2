@@ -3,6 +3,8 @@
 - x get customer json file
 - x create orders.json file
 - x show how many orders
-- .. show orders for each customer: CUSTID - date
+- x show orders for each customer: CUSTID - date
+- .. sort orders under each customer
+
 
 
