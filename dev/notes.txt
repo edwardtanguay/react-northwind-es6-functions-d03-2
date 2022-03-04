@@ -5,8 +5,7 @@
 - x show how many orders
 - x show orders for each customer: CUSTID - date
 - x sort orders under each customer by orderID
-- .. for each order show: (1 of 8), (2 of 8)
+- x for each order show: (1 of 8), (2 of 8)
+- .. fetch product data via API (mit fetch) and show "There are nnn products."
 
-- fetch product data via API (fetch)
-
-
+- show waiting symbol while products loads
