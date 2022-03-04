@@ -1,4 +1,4 @@
 - x clean up react site with blank page
-- .. show number of customers
-	- .. get customer json file
+- x show number of customers
+	- x get customer json file
 

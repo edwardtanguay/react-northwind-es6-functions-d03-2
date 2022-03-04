@@ -9,7 +9,7 @@ function App() {
 		  <ul>
 			  {customers.map(customer => {
 				  return (
-					  <li>{customer.companyName}</li>
+					  <li key={customer.customerID}>{customer.companyName}</li>
 				 )
 			 })}
 		  </ul>
