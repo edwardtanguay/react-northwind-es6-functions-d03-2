@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import customers from './data/customers.json';
 import orders from './data/orders.json';
+import { FaSpinner } from 'react-icons/fa';
 
 // const colors = ['yellow', 'orange', 'purple', 'blue', 'green'];
 // colors.sort();
@@ -31,7 +32,12 @@ function App() {
 			<h1>Northwind Site</h1>
 			<div>There are {customers.length} customers.</div>
 			<div>There are {orders.length} orders.</div>
-			<div>There are {products.length} products.</div>
+			{products.length === 0 && (
+				<FaSpinner className="spinner" />
+			)}
+			{products.length > 0 && (
+				<div>There are {products.length} products.</div>
+			)}
 			<ul>
 				{customers.map(customer => {
 					return (
