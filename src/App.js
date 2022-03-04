@@ -24,7 +24,7 @@ function App() {
 				const data = await response.json();
 				setProducts(data);
 			})();
-		}, 2000);
+		}, 0);
 	}, []);
 
 	return (
@@ -46,6 +46,11 @@ function App() {
 								{orders.filter(m => m.customerID === customer.customerID).sort((a, b) => a.orderID - b.orderID).map((order, index, arr) => {
 									return (
 										<li key={index}>{order.orderID} - {order.orderDate.substring(0, 10)} ({index + 1} of {arr.length})
+											{products.length === 0 && (
+												<ul>
+													<li><FaSpinner className="spinner" /></li>
+												</ul>
+											)}
 											{products.length > 0 && (
 												<ul>
 													{order.details.map(product => {
