@@ -4,7 +4,9 @@
 - x create orders.json file
 - x show how many orders
 - x show orders for each customer: CUSTID - date
-- .. sort orders under each customer
+- x sort orders under each customer by orderID
+- .. for each order show: (1 of 8), (2 of 8)
 
+- fetch product data via API (fetch)
 
 

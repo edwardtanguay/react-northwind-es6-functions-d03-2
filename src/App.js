@@ -2,6 +2,11 @@ import './App.css';
 import customers from './data/customers.json';
 import orders from './data/orders.json';
 
+const colors = ['yellow', 'orange', 'purple', 'blue', 'green'];
+colors.sort();
+console.log(colors);
+
+
 function App() {
   return (
     <div className="App">
@@ -13,9 +18,9 @@ function App() {
 				  return (
 					  <li key={customer.customerID}>{customer.companyName}
 						  <ul>
-							  {orders.filter(m => m.customerID === customer.customerID).map((order, index) => {
+							  {orders.filter(m => m.customerID === customer.customerID).sort((a,b) => a.orderID - b.orderID).map((order, index, arr) => {
 								  return (
-									  <li>{index + 1}. {order.orderID} - {order.orderDate.substring(0,10)}</li>
+									  <li key={index}>{order.orderID} - {order.orderDate.substring(0, 10)} ({index + 1} of {arr.length})</li>
 								  )
 							  })}
 						  </ul> 
