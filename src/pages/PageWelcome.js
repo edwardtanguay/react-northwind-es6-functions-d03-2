@@ -1,5 +1,8 @@
 export const PageWelcome = () => {
 	return (
-		<div>this is page welcome</div>
+		<>
+			<h2>Welcome</h2>
+			<div>this is page welcome</div>
+		</>
 	)
 }

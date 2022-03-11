@@ -13,5 +13,6 @@
 
 - x make 3 components: PageCustomers, PageOrders, PageProducts
 - x make PageWelcome
-- .. put main page in PageCustomers
-- set up React Router
+- x put main page in PageCustomers
+- x set up React Router
+- .. create Nav component and put on welcome page
