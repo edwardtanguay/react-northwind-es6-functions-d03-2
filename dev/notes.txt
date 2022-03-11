@@ -8,5 +8,10 @@
 - x for each order show: (1 of 8), (2 of 8)
 - x fetch product data via API (mit fetch) and show "There are nnn products."
 - x show waiting symbol while products loads
-- .. publish online at Netlify
-- break code into components
+- x publish online at Netlify
+- x break code into components
+
+- x make 3 components: PageCustomers, PageOrders, PageProducts
+- x make PageWelcome
+- .. put main page in PageCustomers
+- set up React Router

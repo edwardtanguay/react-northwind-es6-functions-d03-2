@@ -1,17 +1,14 @@
+import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './App.css';
 import customers from './data/customers.json';
 import orders from './data/orders.json';
 import { FaSpinner } from 'react-icons/fa';
 import { Products } from './components/Products';
-
-// const colors = ['yellow', 'orange', 'purple', 'blue', 'green'];
-// colors.sort();
-// console.log(colors);
-
-// const amount = 99;
-// const online = false;
-// if(amount === 34 && online === true) {}
+import { PageWelcome } from './pages/PageWelcome';
+import { PageCustomers } from './pages/PageCustomers';
+import { PageOrders } from './pages/PageOrders';
+import { PageProducts } from './pages/PageProducts';
 
 const productsUrl = 'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/json/products.json';
 
@@ -37,6 +34,18 @@ function App() {
 			{products.length > 0 && (
 				<div>There are {products.length} products.</div>
 			)}
+
+			<hr />
+			<nav>nav</nav>
+			<hr />
+
+			<Routes>
+				<Route path="/" element={<PageWelcome />} />
+				<Route path="/customers" element={<PageCustomers />} />
+				<Route path="/orders" element={<PageOrders />} />
+				<Route path="/products" element={<PageProducts />} />
+			</Routes>
+
 			<ul>
 				{customers.map(customer => {
 					return (
