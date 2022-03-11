@@ -1,5 +1,8 @@
 export const PageOrders = () => {
 	return (
-		<div>this is page orders</div>
+		<>
+			<h2>Orders</h2>
+			<div>this is page orders</div>
+		</>
 	)
 }
