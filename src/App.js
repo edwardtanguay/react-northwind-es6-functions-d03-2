@@ -19,13 +19,11 @@ function App() {
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
-		setTimeout(() => {
-			(async () => {
-				const response = await fetch(productsUrl);
-				const data = await response.json();
-				setProducts(data);
-			})();
-		}, 0);
+		(async () => {
+			const response = await fetch(productsUrl);
+			const data = await response.json();
+			setProducts(data);
+		})();
 	}, []);
 
 	return (
