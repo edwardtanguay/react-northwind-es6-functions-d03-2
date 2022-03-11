@@ -15,4 +15,5 @@
 - x make PageWelcome
 - x put main page in PageCustomers
 - x set up React Router
+- .. install sass
 - .. create Nav component and put on welcome page

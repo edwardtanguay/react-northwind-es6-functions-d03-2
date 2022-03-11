@@ -1,20 +1,45 @@
 .App {
-	padding: 20px;
+  padding: 20px;
 }
 
-.spinner {
-	font-size: 1rem;
-	margin-top: 5px;
-	color: #444;
-	animation: spin infinite 2s linear;
+.App .spinner {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #444;
+  animation: spin infinite 2s linear;
 }
 
 @keyframes spin {
-	from {
-		transform: rotate(0deg);
-	}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-	to {
-		transform: rotate(360deg);
-	}
+.App nav {
+  background: #eee;
+  padding: 7px;
+}
+
+.App nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.App nav ul li {
+  margin: 0 10px 0 0;
+}
+
+.App nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.App nav ul li a.active {
+  color: #000;
+  font-weight: bold;
 }

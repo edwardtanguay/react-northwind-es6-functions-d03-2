@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import { PageWelcome } from './pages/PageWelcome';
 import { PageCustomers } from './pages/PageCustomers';
 import { PageOrders } from './pages/PageOrders';
@@ -11,9 +11,7 @@ function App() {
 	return (
 		<div className="App">
 			<h1>Northwind Site</h1>
-			<hr />
 			<Nav/>
-			<hr />
 
 			<Routes>
 				<Route path="/" element={<PageWelcome />} />
